@@ -1,0 +1,28 @@
+
+.Wraper{
+    max-width: 1300px;
+    margin: auto;
+    background-color: slategray;
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    .heading{
+        text-align: center;
+    }
+    .container{
+        max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    .task{
+        .task-block{
+            padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+        }
+    }
+    }
+}

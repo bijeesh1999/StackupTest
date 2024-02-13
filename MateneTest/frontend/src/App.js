@@ -1,9 +1,14 @@
+import React from 'react';
+import TaskBox from './components/taskmanager';
+import ViewTask from './components/viewTask';
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome</h1>
+      <TaskBox />
+      <ViewTask />
     </div>
   );
 }
