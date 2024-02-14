@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import {postTask,getAllTask,updateTask} from "./taskApi"
 
 const initialState = {
     data: [],
@@ -6,23 +7,27 @@ const initialState = {
     error: ""
 }
 
-const taskSlice=()=>({
+const taskSlice=createSlice({
     name:"getTask",
     initialState,
     reducers:{},
     extraReducers(builder) {
         builder
-        .addCase(fetchPosts.pending, (state) => {
+        .addCase(getAllTask.pending, (state,action) => {
             state.status = "loading"
         })
-        .addCase(fetchPosts.fulfilled, (state, action) => {
+        .addCase(getAllTask.fulfilled, (state,action) => {
             state.status = "succeeded"
-            state.posts = state.posts.concat(action.payload);
+            state.data=action.payload
         })
-        .addCase(fetchPosts.rejected, (state) => {
+        .addCase(getAllTask.rejected, (state,action) => {
             state.status = "failed"
             state.error = action.error.message
         })
+
+        // =========================================
+
+
     }
 })
 
